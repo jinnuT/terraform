@@ -19,3 +19,24 @@ output "santa" {
 output "jinnu1" {
   value = "${var.sample2}"
 }
+
+
+variable "variable1" {
+  default = "Welcome to the Jungle"
+}
+variable "variable2" {
+  default = 1000
+}
+variable "variable3" {
+  default = true
+}
+
+output "output1" {
+  value = "${var.variable1}"
+}
+output "output2" {
+  value = "${var.variable2}"
+}
+output "output3" {
+  value = "${var.variable3}"
+}
