@@ -31,6 +31,22 @@ variable "variable3" {
   default = true
 }
 
+variable "TRAINING" {
+  default = "DevOps"
+}
+
+variable "TRAININGS" {
+  default = [ "DevOps" , "AWS" , "Terraform" , 10000 ]
+}
+
+variable "TRAINING_DETAILS" {
+  default = {
+    string = "Down Town"
+    numbers = 100000000
+    boolean = false
+  }
+}
+
 output "output1" {
   value = "${var.variable1}"
 }
@@ -42,4 +58,16 @@ output "output3" {
 }
 output "output4" {
   value = "string = ${var.variable1}, integer = ${var.variable2}, boolean = ${var.variable3}"
+}
+
+output "out1" {
+  value = "${var.TRAINING}"
+}
+
+output "out2" {
+  value = "${var.TRAININGS}"
+}
+
+output "out3" {
+  value = "${var.TRAINING_DETAILS}"
 }
