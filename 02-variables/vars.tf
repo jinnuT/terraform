@@ -9,3 +9,7 @@ output "jinnu" {
 output "jithu" {
   value = "${var.sample}"
 }
+
+output "santa" {
+  value = "${var.sample}-from Terraform"
+}
