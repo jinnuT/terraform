@@ -40,3 +40,6 @@ output "output2" {
 output "output3" {
   value = "${var.variable3}"
 }
+output "output4" {
+  value = "string = ${var.variable1}, integer = ${var.variable2}, boolean = ${var.variable3}"
+}
