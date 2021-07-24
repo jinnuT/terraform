@@ -107,3 +107,8 @@ variable "FRUITS" {}
 output "FRUITS" {
   value = "${var.FRUITS}"
 }
+
+variable "VEGETABLES" {}
+output "VEGETABLES" {
+  value = "${var.VEGETABLES}"
+}
