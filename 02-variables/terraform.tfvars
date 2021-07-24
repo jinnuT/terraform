@@ -1,0 +1,2 @@
+FRUITS = ["Apple" , "Banana" , "Kiwi"]
+

@@ -75,3 +75,9 @@ output "out3" {
 output "accessing_array_variable" {
   value = "${var.TRAININGS[0]}--arr[0], ${var.TRAININGS[1]}--arr[1]"
 }
+
+variable "FRUITS" {}
+
+output "Name_of_some_Fruits_are" {
+  value = "${var.FRUITS}"
+}
