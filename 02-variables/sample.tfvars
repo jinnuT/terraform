@@ -1,2 +1,2 @@
-VEGETABLES=["carrots" , "cabbage" , "spinach" ]
+FRUITS=["carrots" , "cabbage" , "spinach" ]
 
