@@ -113,4 +113,6 @@ variable "CARS" {
 }
 output "CARS" {
   value = "${var.CARS}"
+
+
 }
