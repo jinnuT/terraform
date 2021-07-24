@@ -93,3 +93,10 @@ output "Second_Fruit" {
 output "Third_Fruit" {
   value = "${var.FRUITS[2]}"
 }
+
+
+variable "COUNTRY" {}
+
+output "COUNTRY" {
+  value = var.COUNTRY
+}
