@@ -6,3 +6,6 @@ variable "var_1" {
 output "out_1" {
   value = "${var.var_1}"
 }
+output "Group_one" {
+  value = "${var.var_1[0]} , ${var.var_1[3]}"
+}
