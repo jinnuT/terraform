@@ -1,3 +1,4 @@
+/*
 variable "sample" {
   default = "Hello World"
 }
@@ -99,4 +100,10 @@ variable "COUNTRY" {}
 
 output "COUNTRY" {
   value = var.COUNTRY
+}          */
+
+
+variable "FRUITS" {}
+output "FRUITS" {
+  value = "${var.FRUITS}"
 }
