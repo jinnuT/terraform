@@ -108,3 +108,9 @@ output "FRUITS" {
   value = "${var.FRUITS}"
 }
 
+variable "CARS" {
+  default = ["Honda" , "Ford" , "Toyota" , "Tata"]
+}
+output "CARS" {
+  value = "${var.CARS}"
+}
