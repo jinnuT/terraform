@@ -81,3 +81,15 @@ variable "FRUITS" {}
 output "Name_of_some_Fruits_are" {
   value = "${var.FRUITS}"
 }
+
+output "First_Fruit" {
+  value = "${var.FRUITS[0]}"
+}
+
+output "Second_Fruit" {
+  value = "${var.FRUITS[1]}"
+}
+
+output "Third_Fruit" {
+  value = "${var.FRUITS[2]}"
+}
