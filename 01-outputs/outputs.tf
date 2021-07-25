@@ -10,7 +10,9 @@ output "Group_one" {
   value = "${var.var_1[0]} , ${var.var_1[3]}"
 }
        */
-variable "CARS" {}
+variable "CARS" {
+  default = ["Civic" , "Corola"]
+}
 output "Cars" {
   value = "${var.CARS}"
 }
