@@ -12,7 +12,9 @@ provider "aws" {
 output "PRIVATE_IP" {
   value = module.ec2.PRIVATE_IP
 }
-output "HOST_ID" {
-  value = module.ec2.HOST_ID
+
+output "PUBLIC_IP" {
+  value = module.ec2.PUBLIC_IP
 }
+
 
