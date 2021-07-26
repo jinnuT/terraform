@@ -11,3 +11,6 @@ variable "SG_ID" {}
 output "PRIVATE_IP" {
   value = aws_instance.sample.private_ip
 }
+output "HOST_ID" {
+  value = aws_instance.sample.host_id
+}
