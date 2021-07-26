@@ -2,6 +2,7 @@ module "ec2" {
   depends_on  = [module.sg]
   source      = "./ec2"
   SG_ID       = module.sg.SG_ID
+  TYPE        = "t3.small"
 }
 module "sg" {
   source      = "./sg"
@@ -9,10 +10,12 @@ module "sg" {
 provider "aws" {
   region      = "us-east-1"
 }
+
+/* Output declaration only for PRINTING */
 output "PRIVATE_IP" {
   value = module.ec2.PRIVATE_IP
 }
-
+/* Output declaration only for PRINTING */
 output "PUBLIC_IP" {
   value = module.ec2.PUBLIC_IP
 }

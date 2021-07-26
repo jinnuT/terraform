@@ -22,6 +22,7 @@ resource "aws_security_group" "allow_ssh" {
     Name              = "allow_ssh"
   }
 }
+/* Output declaration here only for sending id data to main*/
 output "SG_ID" {
   value = aws_security_group.allow_ssh.id
 }
