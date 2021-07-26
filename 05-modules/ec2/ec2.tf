@@ -14,9 +14,9 @@ variable "TYPE" {}
 
 /* Output declaration here is only for sending data to MAIN */
 output "PRIVATE_IP" {
-  value = aws_instance.sample.private_ip
+  value = aws_instance.sample.*.private_ip
 }
 /* Output declaration here is only for sending data to MAIN */
 output "PUBLIC_IP" {
-  value = aws_instance.sample.public_ip
+  value = aws_instance.sample.*.public_ip
 }
