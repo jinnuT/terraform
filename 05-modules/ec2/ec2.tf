@@ -3,7 +3,7 @@ resource "aws_instance" "sample" {
   instance_type          = "t3.micro"
   vpc_security_group_ids = [var.SG_ID]
   tags                   = {
-    Name                 = "Example"
+    Name                 = "Ex"
   }
 }
 variable "SG_ID" {}
