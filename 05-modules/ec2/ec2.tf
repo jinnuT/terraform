@@ -4,7 +4,7 @@ resource "aws_instance" "sample" {
   instance_type          = var.TYPE
   vpc_security_group_ids = [var.SG_ID]
   tags                   = {
-    Name                 = "Ex"
+    Name                 = "Ex-${count.index}"
   }
 }
 variable "SG_ID" {}
@@ -16,7 +16,4 @@ variable "TYPE" {}
 output "PRIVATE_IP" {
   value = aws_instance.sample.*.private_ip
 }
-/* Output declaration here is only for sending data to MAIN */
-output "PUBLIC_IP" {
-  value = aws_instance.sample.*.public_ip
-}
+

@@ -15,9 +15,6 @@ provider "aws" {
 output "PRIVATE_IP" {
   value = module.ec2.PRIVATE_IP
 }
-/* Output declaration only for PRINTING */
-output "PUBLIC_IP" {
-  value = module.ec2.PUBLIC_IP
-}
+
 
 
