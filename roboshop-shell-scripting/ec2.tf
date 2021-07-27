@@ -1,4 +1,3 @@
-
 resource "aws_spot_instance_request" "cheap_worker" {
   count                           = local.LENGTH
   ami                             = "ami-074df373d6bafa625"
@@ -6,6 +5,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
   instance_type                   = "t3.micro"
   vpc_security_group_ids          = ["sg-0a3395ef37041658b"]
   wait_for_fulfillment            = true
+  
   tags                            = {
     Name                          = element(var.COMPONENTS, count.index)
   }
@@ -22,7 +22,7 @@ resource "null_resource" "run-shell-scripting" {
   count                           = local.LENGTH
   provisioner "remote-exec"       {
     connection {
-      host                        = element(aws_spot_instance_request.cheap_worker.*.public_ip,count.index)
+      host                        = element(aws_spot_instance_request.cheap_worker.*.public_ip, count.index)
       user                        = "centos"
       password                    = "DevOps321"
     }
@@ -36,6 +36,6 @@ resource "null_resource" "run-shell-scripting" {
 }
 
 locals {
-  LENGTH = length(var.COMPONENTS)
+  LENGTH                          = length(var.COMPONENTS)
 }
 
