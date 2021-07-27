@@ -18,6 +18,6 @@ resource "aws_spot_instance_request" "cheap_worker" {
 //}
 
 output "attributes" {
-  value = element(aws_spot_instance_request.cheap_worker.spot_instance_id, count.index)
+  value = aws_spot_instance_request.cheap_worker.spot_instance_id
 }
 
