@@ -18,7 +18,6 @@ resource "aws_spot_instance_request" "cheap_worker" {
 //}
 
 output "attributes" {
-  count = lenght(var.COMPONENTS)
   value = element(aws_spot_instance_request.cheap_worker.spot_instance_id, count.index)
 }
 
