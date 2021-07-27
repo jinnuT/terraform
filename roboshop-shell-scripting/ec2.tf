@@ -20,7 +20,7 @@ resource "aws_ec2_tag" "name-tag" {
 
 resource "null_resource" "run-shell-scripting" {
   count                           = local.LENGTH
-  provisioner "remote-exec" {
+  provisioner "remote-exec"       {
     connection {
       host                        = element(aws_spot_instance_request.cheap_worker.*.public_ip,count.index)
       user                        = "centos"
