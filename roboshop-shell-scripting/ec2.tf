@@ -26,7 +26,7 @@ resource "null_resource" "run-shell-scripting" {
       password                    = "DevOps321"
       host                        = element(aws_spot_instance_request.cheap_worker.*.public_ip,count.index)
     }
-    command = [
+    inline = [
       "cd /home/centos",
       "git clone https://github.com/jinnuT/shell_scripting.git",
       "cd shell-scripting/roboshop",
