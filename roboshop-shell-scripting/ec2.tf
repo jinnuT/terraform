@@ -38,3 +38,10 @@ locals {
   LENGTH                          = length(var.COMPONENTS)
 }
 
+
+
+
+
+
+
+
