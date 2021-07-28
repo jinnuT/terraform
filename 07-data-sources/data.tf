@@ -10,10 +10,10 @@ data "aws_ec2_spot_price" "example" {
   instance_type     = "t3.micro"
   availability_zone = "us-east-1a"
 
-//  filter {
-//    name   = "product-description"
-//    values = ["Linux/UNIX"]
-//  }
+  filter {
+    name   = "product-description"
+    values = ["Linux/UNIX"]
+  }
 }
 
 output "myAMI_id" {
