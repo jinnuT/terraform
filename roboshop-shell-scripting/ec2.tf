@@ -18,22 +18,31 @@ resource "aws_ec2_tag" "name-tag" {
   value                           = element(var.COMPONENTS,count.index)
 }
 
-resource "null_resource" "run-shell-scripting" {
+resource "aws_route53_record" "records" {
   count                           = local.LENGTH
-  provisioner "remote-exec"       {
-    connection {
-      host                        = element(aws_spot_instance_request.cheap_worker.*.public_ip, count.index)
-      user                        = "centos"
-      password                    = "DevOps321"
-    }
-    inline = [
-      "cd /home/centos",
-      "git clone https://github.com/jinnuT/shell_scripting.git",
-      "cd shell_scripting/roboshop",
-      "sudo make ${element(var.COMPONENTS,count.index)}"
-    ]
-  }
+  zone_id                         = aws_route53_record.records.zone_id
+  name                            = element(var.COMPONENTS,count.index)
+  type                            = "A"
+  ttl                             = "300"
+  records                         = [element(aws_spot_instance_request.cheap_worker.*.private_ip, count.index)]
 }
+
+//resource "null_resource" "run-shell-scripting" {
+//  count                           = local.LENGTH
+//  provisioner "remote-exec"       {
+//    connection {
+//      host                        = element(aws_spot_instance_request.cheap_worker.*.public_ip, count.index)
+//      user                        = "centos"
+//      password                    = "DevOps321"
+//    }
+//    inline = [
+//      "cd /home/centos",
+//      "git clone https://github.com/jinnuT/shell_scripting.git",
+//      "cd shell_scripting/roboshop",
+//      "sudo make ${element(var.COMPONENTS,count.index)}"
+//    ]
+//  }
+//}
 locals {
   LENGTH                          = length(var.COMPONENTS)
 }
