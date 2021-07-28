@@ -20,7 +20,7 @@ resource "aws_ec2_tag" "name-tag" {
 
 resource "aws_route53_record" "records" {
   count                           = local.LENGTH
-  zone_id                         = aws_route53_record.records.zone_id
+  zone_id                         = "Z0821647W15DL3WPSKX8"
   name                            = element(var.COMPONENTS,count.index)
   type                            = "A"
   ttl                             = "300"
