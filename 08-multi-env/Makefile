@@ -1,10 +1,10 @@
-help:      					  ## Print Help Message
+help:      				## Print Help Message
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 clean:
 	@rm -rf .terraform*
 
-dev-apply: 				clean ## Install Frontend Component
+dev-apply: 			clean ## Install Frontend Component
 	@terrafrom init -backend-config=env/dev-backend.tfvars -no-color
 	@terrafrom apply -auto-approve -var-file=env/dev.tfvars -no-color
 
