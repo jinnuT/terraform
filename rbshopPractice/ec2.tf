@@ -31,6 +31,7 @@ resource "null_resource" "run-shell-script" {
       "git clone https://github.com/raghudevops57/shell-scripting.git",
       "cd shell_scripting/roboshop",
       "sudo make ${element(var.COMPONENT, count.index)}"
+
     ]
   }
 }
