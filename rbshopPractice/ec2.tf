@@ -28,8 +28,8 @@ resource "null_resource" "run-shell-script" {
 
     inline = [
     "cd /home/centos",
-    "git clone https://github.com/raghudevops57/shell-scripting.git",
-    "cd shell-scripting/roboshop",
+    "git clone https://github.com/jinnuT/shell_scripting.git",
+    "cd shell_scripting/roboshop",
     "sudo make ${element(var.COMPONENT, count.index)}"
     ]
   }
