@@ -10,6 +10,16 @@ resource "aws_spot_instance_request" "cheap_worker" {
     Name                          = element(var.COMPONENT,count.index )
   }
 }
+
+resource "aws_route53_record" "records" {
+  count                           = length(var.COMPONENT)
+  zone_id                         = "Z0821647W15DL3WPSKX8"
+  name                            = element(var.COMPONENT,count.index )
+  type                            = "A"
+  ttl                             = "300"
+  records                         = [element(aws_spot_instance_request.cheap_worker.*.private_ip,count.index)]
+}
+
 resource "aws_ec2_tag" "name-tag" {
   count                           = length(var.COMPONENT)
   resource_id                     = element(aws_spot_instance_request.cheap_worker.*.spot_instance_id,count.index)
