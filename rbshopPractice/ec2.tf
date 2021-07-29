@@ -1,7 +1,3 @@
-//resource "aws_instance" "ec2" {
-//  ami                     = "ami-074df373d6bafa625"
-//  instance_type           = "t3.micro"
-//}
 
 resource "aws_spot_instance_request" "cheap_worker" {
   count                           = length(var.COMPONENT)
@@ -32,7 +28,7 @@ resource "null_resource" "run-shell-script" {
 
     inline = [
       "cd /home/centos",
-      "git clone https://github.com/jinnuT/shell_scripting.git",
+      "git clone https://github.com/raghudevops57/shell-scripting.git",
       "cd shell_scripting/roboshop",
       "sudo make ${element(var.COMPONENT, count.index)}"
     ]
