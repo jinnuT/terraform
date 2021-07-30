@@ -10,4 +10,5 @@ resource "local_file" "myPet" {
 
 output "pet_name" {
   value = random_pet.my_pet.id
+
 }
