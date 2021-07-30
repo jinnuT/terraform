@@ -7,7 +7,7 @@ resource "local_file" "car" {
   content        = var.contentO
 }
 resource "random_pet" "my-pet" {
-  prefix          = var.prefix[3]
+  prefix          = var.prefix[1]
   separator       = var.separator
   length          = var.length
 }
