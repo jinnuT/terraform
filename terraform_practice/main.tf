@@ -1,8 +1,13 @@
 resource "local_file" "pet" {
-  filename = "pets.txt"
-  content = "We love pets!"
+  filename0 = "${var.filename0}"
+  content0 = "${var.content0}"
 }
 resource "local_file" "car" {
-  filename = "cars.txt"
-  content = "We love all kinds of cars!!"
+  filename1 = "${var.filename1}"
+  content2 = "${var.content1}"
+}
+resource "random_pet" "my-pet" {
+  prefix      = var.prefix
+  separator   = var.separator
+  lenght      = var.lenght
 }
