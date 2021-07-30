@@ -1,11 +1,8 @@
 resource "local_file" "pet" {
-  filename       = var.filenameZ
-  content        = var.contentZ
+  filename       = var.filename
+  content        = var.content
 }
-resource "local_file" "car" {
-  filename       = var.filenameO
-  content        = var.contentO
-}
+
 resource "random_pet" "my-pet" {
   prefix          = var.prefix[1]
   separator       = var.separator

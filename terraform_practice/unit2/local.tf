@@ -3,3 +3,7 @@ resource "random_pet" "my_pet" {
   prefix = "Mr"
   separator = "."
 }
+resource "local_file" "myPet" {
+  filename = "myPet.txt"
+  content = "Random name of my pet is ${random_pet.my_pet.id}"
+}

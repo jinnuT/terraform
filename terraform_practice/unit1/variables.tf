@@ -1,17 +1,10 @@
-variable "filenameZ" {
+variable "filename" {
   default = "pets.txt"
 }
-variable "contentZ" {
+variable "content" {
   default = "We love all pets!"
 }
 
-variable "filenameO" {
-  default = "cars.txt"
-}
-
-variable "contentO" {
-  default = "We love all cars!!"
-}
 
 variable "separator" {
   default = "."

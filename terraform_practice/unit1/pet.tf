@@ -3,3 +3,5 @@ resource "random_pet" "my-pet" {
   separator   = "."
   lenght      = "1"
 }
+
+
