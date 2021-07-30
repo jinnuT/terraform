@@ -12,9 +12,7 @@ variable "filenameO" {
 variable "contentO" {
   default = "We love all cars!!"
 }
-variable "prefix" {
-  default = "Mrs"
-}
+
 variable "separator" {
   default = "."
 }
