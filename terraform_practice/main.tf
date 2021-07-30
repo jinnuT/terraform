@@ -11,3 +11,4 @@ resource "random_pet" "my-pet" {
   separator   = var.separator
   lenght      = var.lenght
 }
+
