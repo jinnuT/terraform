@@ -1,14 +1,14 @@
-variable "filename0" {
+variable "filenameZ" {
   default = "pets.txt"
 }
-variable "content0" {
+variable "contentZ" {
   default = "We love all pets!"
 }
 
-variable "filename1" {
+variable "filenameO" {
   default = "cars.txt"
 }
-variable "content1" {
+variable "contentO" {
   default = "We love all cars!!"
 }
 variable "prefix" {
