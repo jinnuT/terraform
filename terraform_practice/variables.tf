@@ -17,6 +17,6 @@ variable "prefix" {
 variable "separator" {
   default = "."
 }
-variable "lenght" {
+variable "length" {
   default = "1"
 }
