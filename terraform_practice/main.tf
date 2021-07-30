@@ -1,7 +1,6 @@
 resource "local_file" "pet" {
   filename       = var.filenameZ
   content        = var.contentZ
-  table          = var.tableZ
 }
 resource "local_file" "car" {
   filename       = var.filenameO

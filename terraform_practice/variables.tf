@@ -8,9 +8,7 @@ variable "contentZ" {
 variable "filenameO" {
   default = "cars.txt"
 }
-variable "tableZ" {
-  default = "Hello"
-}
+
 variable "contentO" {
   default = "We love all cars!!"
 }
@@ -22,4 +20,8 @@ variable "separator" {
 }
 variable "length" {
   default = "1"
+}
+
+variable "prefix" {
+  default = ["Mrs" , "Mr" , "Sir" , "Madam"]
 }
