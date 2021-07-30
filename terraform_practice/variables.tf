@@ -8,6 +8,9 @@ variable "contentZ" {
 variable "filenameO" {
   default = "cars.txt"
 }
+variable "tableZ" {
+  default = "Hello"
+}
 variable "contentO" {
   default = "We love all cars!!"
 }
