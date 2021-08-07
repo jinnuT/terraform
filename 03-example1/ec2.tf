@@ -39,7 +39,7 @@ resource "aws_security_group" "allow_ssh" {
 //}
 
 output "sg_attribute" {
-  value = aws_security_group.allow_ssh
+  value = aws_security_group.allow_ssh.id
 }
 provider "aws" {
   region = "us-east-1"
