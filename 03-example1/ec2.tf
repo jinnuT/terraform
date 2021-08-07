@@ -34,6 +34,9 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
+provider "aws" {
+  region = "us-east-1"
+}
 
 //output "sg_attribute" {
 //  value = aws_security_group.allow_ssh.id
@@ -43,7 +46,4 @@ output "ec2-attributes" {
   value = aws_instance.sample
 }
 
-provider "aws" {
-  region = "us-east-1"
-}
 
